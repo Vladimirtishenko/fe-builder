@@ -1,6 +1,6 @@
 {
   "name": "fe-builder",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Build frontent architecture",
   "main": "index.js",
   "scripts": {

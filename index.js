@@ -1,6 +1,8 @@
 var fs = require('fs');
 var source = require('./stucture.json');
 
+module.exports = (function () {
+
 (function createTree(tree, folder){
 
 for(var mark in tree){
@@ -19,7 +21,7 @@ for(var mark in tree){
 			}
 		} 
 		else if(!isNaN(mark)){
-			fs.createReadStream('./source/'+tree[mark]).pipe(fs.createWriteStream(folder+tree[mark]));
+			fs.createReadStream(__dirname + '/source/'+tree[mark]).pipe(fs.createWriteStream(folder+tree[mark]));
 		}
 		else if(mark == "$"){
 			cycleCopy(tree[mark], "")
@@ -42,7 +44,10 @@ for(var mark in tree){
 function cycleCopy(tree, folder) {
 	var listFiles = tree.split(', ');
     for (var i = listFiles.length - 1; i >= 0; i--) {
-    	fs.createReadStream('./source/'+listFiles[i]).pipe(fs.createWriteStream(folder+listFiles[i]));	
+    	fs.createReadStream(__dirname +  '/source/'+listFiles[i]).pipe(fs.createWriteStream(folder+listFiles[i]));	
     }
 }
+
+
+})();
 
