@@ -1,11 +1,13 @@
 # Installing
 For installing Front End Architecture which consist of (Stylus, Jade, Webpack + Babel, Gulp), you must do all at example:
 
-  - cd /to/project/folder
-  - npm i fe-builder
-  - echo "require('fe-builder')" >> index.js
-  - node index.js
-  - rm index.js
+```sh
+$ cd /to/project/folder
+$ npm i fe-builder
+$ echo "require('fe-builder')" >> index.js
+$ node index.js
+$ rm index.js
+```
 
 Now you have project tree:
 - public
@@ -58,3 +60,4 @@ Dillinger uses a number of open source projects to work properly:
    [Webpack]: <https://webpack.github.io/>
    [Pug]: <https://pugjs.org/api/getting-started.html>
    [Stylus]: <http://stylus-lang.com/>
+
