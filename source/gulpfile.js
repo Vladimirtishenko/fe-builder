@@ -1,22 +1,16 @@
 "use strict";
 
 const gulp = require('gulp'),
-	  jade = require('gulp-jade'),
-	  prettify = require('gulp-html-prettify');
+      pug = require('gulp-pug'),
+      prettify = require('gulp-html-prettify');
+ 
+gulp.task('pug', function () {
+  return gulp.src('./public/pug/*.pug')
+  .pipe(pug())
+  .pipe(prettify({indent_char: ' ', indent_size: 4}))
+  .pipe(gulp.dest('./'));
+});
 
-
-gulp.task('jade', function() {
-    var YOUR_LOCALS = {};
-
-    return gulp.src('./public/jade/*.jade')
-        .pipe(jade({
-            locals: YOUR_LOCALS
-        }))
-        .pipe(prettify({indent_char: ' ', indent_size: 3}))
-        .pipe(gulp.dest('./'))
-})
-
-
-gulp.task('watch', function() {
-    gulp.watch("./public/jade/**/*.jade", ['jade']);
+gulp.task('default', function() {
+    gulp.watch("./public/pug/**/*.pug", ['pug']);
 });

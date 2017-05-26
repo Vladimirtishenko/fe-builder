@@ -15,7 +15,7 @@ Now you have project tree:
     - css
     - js
         - app.js (Entry point for webpack)
-        - helper.js (Some helper method)
+        - core (Core UI Framework) https://github.com/Vladimirtishenko/core-ui-framework
     - jade
         - layout
             - layout.jade (Layout for all block with link css to path /build) 
@@ -29,7 +29,14 @@ Now you have project tree:
 - webpack.config.js (With architecture for transform stylus to css and ES6 to ES5)
 - node_modules
 
-### Tech
+# Reqirement
+
+- Node.js >= 6.4.*
+- NPM >= 3.10.*
+- Webpack 2
+
+
+# Tech
 
 Dillinger uses a number of open source projects to work properly:
 

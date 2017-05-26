@@ -1,6 +1,6 @@
 {
   "name": "fe-builder",
-  "version": "1.0.6",
+  "version": "1.1.1",
   "description": "Build frontent architecture",
   "main": "index.js",
   "scripts": {
@@ -33,12 +33,10 @@
     "extract-text-webpack-plugin": "latest",
     "file-loader": "^0.11.1",
     "gulp": "latest",
-    "gulp-html-prettify": "latest",
-    "gulp-pug": "latest",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-pug": "^3.3.0",
     "gulp-watch": "latest",
     "postcss-loader": "^2.0.5",
-    "poststylus": "latest",
-    "rucksack-css": "latest",
     "style-loader": "latest",
     "stylus": "latest",
     "stylus-loader": "latest",

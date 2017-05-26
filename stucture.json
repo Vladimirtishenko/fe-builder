@@ -8,9 +8,9 @@
 		"styl": "build.styl, reset.styl",
 		"build": "",
 		"img": "",
-		"jade": {
-			"0" : "index.jade",
-			"layout" : "layout.jade",
+		"pug": {
+			"0" : "index.pug",
+			"layout" : "layout.pug",
 			"include": ""
 		}
 	},
