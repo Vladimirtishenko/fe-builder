@@ -25,20 +25,25 @@
   },
   "homepage": "https://github.com/Vladimirtishenko/fe-builder#readme",
   "dependencies": {
-    "babel-core": "latest",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "latest",
     "css-loader": "latest",
     "extract-text-webpack-plugin": "latest",
+    "file-loader": "^0.11.1",
     "gulp": "latest",
     "gulp-html-prettify": "latest",
     "gulp-pug": "latest",
     "gulp-watch": "latest",
+    "postcss-loader": "^2.0.5",
     "poststylus": "latest",
     "rucksack-css": "latest",
     "style-loader": "latest",
     "stylus": "latest",
     "stylus-loader": "latest",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "url-loader": "^0.5.8",
     "webpack": "latest"
   }
 }
