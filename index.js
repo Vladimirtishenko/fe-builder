@@ -1,6 +1,6 @@
 var fs = require('fs');
 var source = require('./stucture.json');
-var package = require('./package_old.json').dependencies;
+var package = require('./package.json').dependencies;
 
 require('child_process').exec('npm init --yes', function (error, out) {
 	var pathToPackage =  __dirname + '/package.json';
