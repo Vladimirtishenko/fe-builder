@@ -1,5 +1,5 @@
 # Installing
-For installing Front End Architecture which consist of (Stylus, Jade, Webpack + Babel, Gulp), you must do all at example:
+For installing Front End Architecture which consist of (Stylus, Pug, Webpack + Babel, Gulp), you must do all at example:
 
 ```sh
 $ cd /to/project/folder
@@ -16,16 +16,16 @@ Now you have project tree:
     - js
         - app.js (Entry point for webpack)
         - core (Core UI Framework) https://github.com/Vladimirtishenko/core-ui-framework
-    - jade
+    - pug
         - layout
-            - layout.jade (Layout for all block with link css to path /build) 
-        - include (Folder for some included files e.g: header.jade, menu.jade et al.)
-        - index.jade (Main html block content)
+            - layout.pug (Layout for all block with link css to path /build) 
+        - include (Folder for some included files e.g: header.pug, menu.pug et al.)
+        - index.pug (Main html block content)
     - styl
         - reset.styl
         - build.styl
     - img
-- gulpfule.js (With tack for transformation jade file to html)
+- gulpfule.js (With tack for transformation pug file to html)
 - webpack.config.js (With architecture for transform stylus to css and ES6 to ES5)
 - node_modules
 
