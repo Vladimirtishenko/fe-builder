@@ -1,5 +1,20 @@
 var fs = require('fs');
 var source = require('./stucture.json');
+var package = require('./package_old.json').dependencies;
+
+require('child_process').exec('npm init --yes', function (error, out) {
+	var pathToPackage =  __dirname + '/package.json';
+	if(!error){
+		fs.readFile(pathToPackage, 'utf8', function(err, contents) {
+			let json = JSON.parse(contents);
+		    json.dependencies = package;
+		    fs.writeFile (pathToPackage, JSON.stringify(json), function(err) {
+                if (err) console.log('File package.json not created!');
+                console.log('package.json created');
+            });
+		});
+	}
+});
 
 module.exports = (function () {
 
@@ -53,7 +68,6 @@ function cycleCopy(tree, folder) {
     	}	
     }
 }
-
 
 })();
 
