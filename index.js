@@ -1,6 +1,7 @@
 var fs = require('fs');
 var source = require('./stucture.json');
 var package = require('./package.json').dependencies;
+var glob = require('glob');
 
 require('child_process').exec('npm init --yes', function (error, out) {
 	var pathToPackage =  __dirname + '/package.json';
@@ -17,6 +18,17 @@ require('child_process').exec('npm init --yes', function (error, out) {
 });
 
 module.exports = (function () {
+
+new glob.Glob('./source/.npmignore')
+	.on('match', function(path) {
+		fs.rename(path, path.replace(/\.npmignore$/, '.gitignore'), function(err) {
+			if (err) throw err;
+		});
+	})
+	.on('error', function(err) {
+		throw err;
+});
+
 
 (function createTree(tree, folder){
 
