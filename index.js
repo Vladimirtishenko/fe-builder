@@ -13,6 +13,7 @@ for(var mark in tree){
 		}
 		folder += mark + "/";
 		createTree(tree[mark], folder);
+		folder = "public/";
 
 	} else {
 		if(tree[mark] == ""){
@@ -44,10 +45,18 @@ for(var mark in tree){
 function cycleCopy(tree, folder) {
 	var listFiles = tree.split(', ');
     for (var i = listFiles.length - 1; i >= 0; i--) {
-    	fs.createReadStream(__dirname +  '/source/'+listFiles[i]).pipe(fs.createWriteStream(folder+listFiles[i]));	
+
+    	if(listFiles[i].indexOf('http') > -1){
+    		require('child_process').exec('git clone https://github.com/Vladimirtishenko/core-ui-framework.git ' + folder);
+    	} else {
+    		fs.createReadStream(__dirname +  '/source/'+listFiles[i]).pipe(fs.createWriteStream(folder+listFiles[i]));	
+    	}	
     }
 }
 
 
 })();
+
+
+
 

@@ -1,6 +1,6 @@
 {
   "name": "fe-builder",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Build frontent architecture",
   "main": "index.js",
   "scripts": {
@@ -25,21 +25,20 @@
   },
   "homepage": "https://github.com/Vladimirtishenko/fe-builder#readme",
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.0",
-    "babel-preset-es2015": "^6.22.0",
-    "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "gulp": "^3.9.1",
-    "gulp-html-prettify": "0.0.1",
-    "gulp-pug": "^3.2.0",
-    "gulp-watch": "^4.3.11",
-    "poststylus": "^0.2.3",
-    "rucksack-css": "^0.9.1",
-    "style-loader": "^0.13.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^2.4.0",
-    "webpack": "^1.9.11"
+    "babel-core": "latest",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "latest",
+    "css-loader": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "gulp": "latest",
+    "gulp-html-prettify": "latest",
+    "gulp-pug": "latest",
+    "gulp-watch": "latest",
+    "poststylus": "latest",
+    "rucksack-css": "latest",
+    "style-loader": "latest",
+    "stylus": "latest",
+    "stylus-loader": "latest",
+    "webpack": "latest"
   }
 }

@@ -1,7 +1,10 @@
 {
 	"public": {
+		"js": {
+			"0": "app.js",
+			"core" : "https://github.com/Vladimirtishenko/core-ui-framework.git"
+			},
 		"css": "",
-		"js": "app.js, helper.js",
 		"styl": "build.styl, reset.styl",
 		"build": "",
 		"img": "",
