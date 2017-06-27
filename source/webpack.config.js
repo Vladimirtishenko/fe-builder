@@ -41,6 +41,7 @@ let config = [{
     name: 'styles',
     entry: {
         styles: "./public/styl/build.styl",
+        core: "./public/js/core/styl/core.styl",
     },
     output: {
         path: __dirname + '/public/build/',

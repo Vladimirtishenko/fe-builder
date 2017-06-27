@@ -33,7 +33,7 @@ Now you have project tree:
 
 - Node.js >= 6.4.*
 - NPM >= 3.10.*
-- Webpack 2
+- Webpack 2+ 
 
 
 # Tech

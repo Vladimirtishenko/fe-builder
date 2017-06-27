@@ -5,7 +5,7 @@
 			"core" : "https://github.com/Vladimirtishenko/core-ui-framework.git"
 			},
 		"css": "",
-		"styl": "build.styl, reset.styl",
+		"styl": "build.styl",
 		"build": "",
 		"img": "",
 		"pug": {
