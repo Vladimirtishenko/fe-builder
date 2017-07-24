@@ -65,6 +65,10 @@ let config = [{
                     'stylus-loader'
                     ]
                 }) 
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg|jpg|jpeg)$/, 
+                loader: 'url-loader?limit=100000'
             }
         ]  
     },
