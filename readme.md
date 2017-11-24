@@ -11,6 +11,8 @@ $ rm index.js
 
 Now you have project tree:
 - public
+    - img
+    - fonts
     - build
     - css
     - js
@@ -22,11 +24,13 @@ Now you have project tree:
         - include (Folder for some included files e.g: header.pug, menu.pug et al.)
         - index.pug (Main html block content)
     - styl
-        - reset.styl
-        - build.styl
-    - img
-- gulpfule.js (With tack for transformation pug file to html)
+        - vendor
+          - bootstrap.styl
+        - build.styl (included core.styl from core-ui-framework and bootstrap.styl)
+- gulpfule.js (With tack for transformation pug file to html and image minified)
 - webpack.config.js (With architecture for transform stylus to css and ES6 to ES5)
+- .babelrc
+- .gitignore
 - node_modules
 
 # Reqirement
