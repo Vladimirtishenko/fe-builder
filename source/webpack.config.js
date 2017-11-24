@@ -23,10 +23,7 @@ let config = [{
             {
                 test: /\.js?$/,
                 exclude: /node_modules/,
-                loader: "babel-loader",
-                query: {
-                    presets: ['es2015']
-                }
+                loader: "babel-loader"
             }
         ]
     },
@@ -41,7 +38,6 @@ let config = [{
     name: 'styles',
     entry: {
         styles: "./public/styl/build.styl",
-        core: "./public/js/core/styl/core.styl",
     },
     output: {
         path: __dirname + '/public/build/',
@@ -67,7 +63,7 @@ let config = [{
                 }) 
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg|jpg|jpeg)$/, 
+                test: /\.(png|woff|woff2|eot|ttf|otf|svg|jpg|jpeg|gif)$/, 
                 loader: 'url-loader?limit=100000'
             }
         ]  

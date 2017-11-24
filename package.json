@@ -1,47 +1,52 @@
 {
-  "name": "fe-builder",
-  "version": "1.1.10",
-  "description": "Build frontent architecture",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vladimirtishenko/fe-builder.git"
-  },
-  "keywords": [
-    "build",
-    "front-end",
-    "stylus",
-    "jade",
-    "gulp",
-    "webpack"
-  ],
-  "author": "Vladimir Tischenko",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Vladimirtishenko/fe-builder/issues"
-  },
-  "homepage": "https://github.com/Vladimirtishenko/fe-builder#readme",
-  "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "latest",
-    "css-loader": "latest",
-    "extract-text-webpack-plugin": "latest",
-    "file-loader": "^0.11.1",
-    "gulp": "latest",
-    "gulp-html-prettify": "0.0.1",
-    "gulp-pug": "^3.3.0",
-    "gulp-watch": "latest",
-    "postcss-loader": "^2.0.5",
-    "style-loader": "latest",
-    "stylus": "latest",
-    "stylus-loader": "latest",
-    "uglifyjs-webpack-plugin": "^0.4.3",
-    "url-loader": "^0.5.9",
-    "webpack": "latest"
-  }
+    "name": "fe-builder",
+    "version": "1.1.11",
+    "description": "Build frontent architecture",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --watch",
+        "html": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Vladimirtishenko/fe-builder.git"
+    },
+    "keywords": [
+        "build",
+        "front-end",
+        "stylus",
+        "jade",
+        "gulp",
+        "webpack"
+    ],
+    "author": "Vladimir Tischenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Vladimirtishenko/fe-builder/issues"
+    },
+    "homepage": "https://github.com/Vladimirtishenko/fe-builder#readme",
+    "dependencies": {
+        "babel-core": "latest",
+        "babel-loader": "latest",
+        "babel-preset-env": "latest",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "css-loader": "latest",
+        "extract-text-webpack-plugin": "latest",
+        "file-loader": "latest",
+        "gulp": "latest",
+        "gulp-pug": "latest",
+        "gulp-rename": "latest",
+        "gulp-imagemin": "latest",
+        "gulp-watch": "latest",
+        "postcss-loader": "latest",
+        "style-loader": "latest",
+        "stylus": "latest",
+        "stylus-loader": "latest",
+        "uglifyjs-webpack-plugin": "latest",
+        "url-loader": "latest",
+        "webpack": "latest",
+        "bootstrap-styl": "^5.0.8"
+    },
+    "devDependencies": {}
 }

@@ -5,14 +5,18 @@
 			"core" : "https://github.com/Vladimirtishenko/core-ui-framework.git"
 			},
 		"css": "",
-		"styl": "build.styl",
+		"styl": {
+			"0": "build.styl",
+			"vendor": "bootstrap.styl"
+		},
 		"build": "",
 		"img": "",
+		"fonts": "",
 		"pug": {
 			"0" : "index.pug",
 			"layout" : "layout.pug",
 			"include": ""
 		}
 	},
-	"$": "gulpfile.js, webpack.config.js, .gitignore"
+	"$": "gulpfile.js, webpack.config.js, .gitignore, .babelrc"
 }
