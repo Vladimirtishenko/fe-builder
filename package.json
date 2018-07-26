@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "webpack --watch",
-        "html": "gulp"
+        "prod": "webpack -p --process --color"
     },
     "repository": {
         "type": "git",
@@ -25,28 +25,29 @@
         "url": "https://github.com/Vladimirtishenko/fe-builder/issues"
     },
     "homepage": "https://github.com/Vladimirtishenko/fe-builder#readme",
-    "dependencies": {
-        "babel-core": "latest",
-        "babel-loader": "latest",
-        "babel-preset-env": "latest",
+    "dependencies": {},
+    "devDependencies": {
+        "autoprefixer": "^9.0.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
-        "css-loader": "latest",
-        "extract-text-webpack-plugin": "latest",
-        "file-loader": "latest",
-        "gulp": "latest",
-        "gulp-pug": "latest",
-        "gulp-rename": "latest",
-        "gulp-imagemin": "latest",
-        "gulp-watch": "latest",
-        "postcss-loader": "latest",
-        "style-loader": "latest",
-        "stylus": "latest",
-        "stylus-loader": "latest",
-        "uglifyjs-webpack-plugin": "latest",
-        "url-loader": "latest",
-        "webpack": "latest",
-        "bootstrap-styl": "^5.0.8"
-    },
-    "devDependencies": {}
+        "bootstrap-styl": "^5.0.8",
+        "bundle-loader": "^0.5.6",
+        "css-loader": "^1.0.0",
+        "extract-loader": "^2.0.1",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "postcss-loader": "^2.1.6",
+        "pug": "^2.0.3",
+        "pug-html-loader": "^1.1.5",
+        "style-loader": "^0.21.0",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
+        "webpack": "^4.16.2",
+        "webpack-cli": "^3.1.0"
+    }
 }

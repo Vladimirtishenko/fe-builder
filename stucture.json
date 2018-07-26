@@ -2,8 +2,8 @@
 	"public": {
 		"js": {
 			"0": "app.js",
-			"core" : "https://github.com/Vladimirtishenko/core-ui-framework.git"
-			},
+			"1": "index.js"
+		},
 		"css": "",
 		"styl": {
 			"0": "build.styl",
@@ -18,5 +18,5 @@
 			"include": ""
 		}
 	},
-	"$": "gulpfile.js, webpack.config.js, .gitignore, .babelrc"
+	"$": "webpack.config.js, .gitignore, .babelrc"
 }

@@ -3,23 +3,30 @@ html(lang="en")
 	head
 		title 
 		meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+
 		meta(name='keywords', content='')
 		meta(name='description', content='')
-		meta(property='vk:image', content='')
-		meta(property='og:image', content='')
-		meta(property='image', content='')
-		meta(property='vk:Description', content='')
-		meta(property='og:title', content='')
-		meta(property='og:type', content='')
+
+		meta(name='twitter:card', content='summary_large_image')
+		meta(name='twitter:title', content="")
+		meta(name='twitter:description', content='')
+		meta(name='twitter:image', content='')
+		meta(name='twitter:image:alt', content="")
+		meta(property='og:title', content="")
+		meta(property='og:site_name', content='')
 		meta(property='og:url', content='')
-		meta(property='og:Description', content='')
+		meta(property='og:description', content="")
+		meta(property='og:type', content='website')
+		meta(property='og:image', content='')
+
 		link(rel='alternate', hreflang='', href='/')
 		link(rel='image_src', href='')
 		link(rel='shortcut icon', href='')
 		link(rel='apple-touch-icon', sizes='128x128', href='')
 		link(rel='apple-touch-icon-precomposed', sizes='128x128', href='')
-		link(rel='stylesheet', href='public/build/styles.min.css')
+		link(rel='stylesheet', href='https://cdn.report/build/core.min.css')
+		link(rel='stylesheet', href='/public/build/styles.min.css')
 	body
-		//- include include/header
 		block content
-		//- include include/footer
+		script(src="https://cdn.report/build/core.min.js")
+		script(src="/public/build/build.app.js")
