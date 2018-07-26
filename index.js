@@ -17,7 +17,7 @@ module.exports = (function() {
             		read = fs.readFileSync("package.json", 'utf8');
 	                json = JSON.parse(read);
                     json.dependencies = package.dependencies;
-	                json.dependencies = package.scripts;
+	                json.scripts = package.scripts;
 	                fs.writeFileSync("package.json", JSON.stringify(json, null, 4))
                     
                     if (fs.existsSync(__dirname + '/source/gitignore')) {
