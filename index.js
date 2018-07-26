@@ -1,6 +1,6 @@
 var fs = require('fs');
 var source = require('./stucture.json');
-var package = require('./package.json').dependencies;
+var package = require('./package.json');
 
 module.exports = (function() {
 
