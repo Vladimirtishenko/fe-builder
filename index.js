@@ -20,7 +20,9 @@ module.exports = (function() {
 	                json = JSON.parse(read);
 	                json.dependencies = package;
 	                fs.writeFileSync("package.json", JSON.stringify(json, null, 4))
-	                fs.renameSync(__dirname + '/source/.npmignore', __dirname + '/source/.gitignore')
+                    if (fs.existsSync(__dirname + '/source/.npmignore')) {
+                        fs.renameSync(__dirname + '/source/.npmignore', __dirname + '/source/.gitignore')
+                    }
             	} catch(e){
             		console.log(e);
             	}
