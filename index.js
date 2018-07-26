@@ -9,8 +9,6 @@ module.exports = (function() {
 
         require('child_process').exec('npm init --yes', function(error, out) {
             var pathToPackage = __dirname + '/package.json',
-                gitignore = __dirname + '/source/.gitignore',
-                npmignore = __dirname + '/source/.npmignore',
                 read,
                 json;
 
@@ -20,8 +18,13 @@ module.exports = (function() {
 	                json = JSON.parse(read);
 	                json.dependencies = package;
 	                fs.writeFileSync("package.json", JSON.stringify(json, null, 4))
-                    if (fs.existsSync(__dirname + '/source/.npmignore')) {
-                        fs.renameSync(__dirname + '/source/.npmignore', __dirname + '/source/.gitignore')
+                    
+                    if (fs.existsSync(__dirname + '/source/gitignore')) {
+                        fs.renameSync(__dirname + '/source/gitignore', __dirname + '/source/.gitignore')
+                    }
+
+                    if (fs.existsSync(__dirname + '/source/babelrc')) {
+                        fs.renameSync(__dirname + '/source/babelrc', __dirname + '/source/.babelrc')
                     }
             	} catch(e){
             		console.log(e);
