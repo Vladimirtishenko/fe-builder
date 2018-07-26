@@ -1,7 +1,7 @@
 'use strict';
 
-import '../stylus/build.styl';
+import '../styl/build.styl';
 
-import 'file!pug!../pug/index.pug';
+import '../pug/index.pug';
 
 import './app.js'
