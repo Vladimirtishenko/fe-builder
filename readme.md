@@ -4,9 +4,7 @@ For installing Front End Architecture which consist of (Stylus, Pug, Webpack + B
 ```sh
 $ cd /to/project/folder
 $ npm i fe-builder
-$ echo "require('fe-builder')" >> index.js
-$ node index.js
-$ rm index.js
+$ echo "require('fe-builder')" >> index.js && node index.js && rm index.js
 ```
 
 Now you have project tree:
@@ -17,7 +15,6 @@ Now you have project tree:
     - css
     - js
         - app.js (Entry point for webpack)
-        - core (Core UI Framework) https://github.com/Vladimirtishenko/core-ui-framework
     - pug
         - layout
             - layout.pug (Layout for all block with link css to path /build) 
@@ -26,7 +23,6 @@ Now you have project tree:
     - styl
         - vendor
           - bootstrap.styl
-        - build.styl (included core.styl from core-ui-framework and bootstrap.styl)
 - gulpfule.js (With tack for transformation pug file to html and image minified)
 - webpack.config.js (With architecture for transform stylus to css and ES6 to ES5)
 - .babelrc

@@ -12,24 +12,27 @@ module.exports = (function() {
                 read,
                 json;
 
-            if (!error) {
-            	try {
-            		read = fs.readFileSync("package.json", 'utf8');
-	                json = JSON.parse(read);
-                    json.dependencies = package.dependencies;
-	                json.scripts = package.scripts;
-	                fs.writeFileSync("package.json", JSON.stringify(json, null, 4))
-                    
-                    if (fs.existsSync(__dirname + '/source/gitignore')) {
-                        fs.renameSync(__dirname + '/source/gitignore', __dirname + '/source/.gitignore')
-                    }
+            if(error){
+                throw error;
+                return;
+            }
 
-                    if (fs.existsSync(__dirname + '/source/babelrc')) {
-                        fs.renameSync(__dirname + '/source/babelrc', __dirname + '/source/.babelrc')
-                    }
-            	} catch(e){
-            		console.log(e);
-            	}
+            try {
+                read = fs.readFileSync("package.json", 'utf8');
+                json = JSON.parse(read);
+                json.dependencies = package.dependencies;
+                json.scripts = package.scripts;
+                fs.writeFileSync("package.json", JSON.stringify(json, null, 4))
+                
+                if (fs.existsSync(__dirname + '/source/gitignore')) {
+                    fs.renameSync(__dirname + '/source/gitignore', __dirname + '/source/.gitignore')
+                }
+
+                if (fs.existsSync(__dirname + '/source/babelrc')) {
+                    fs.renameSync(__dirname + '/source/babelrc', __dirname + '/source/.babelrc')
+                }
+            } catch(e){
+                console.log(e);
             }
             createTree(source, "")
         });

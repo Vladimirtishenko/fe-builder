@@ -1,8 +1,9 @@
 "use strict";
 
 const webpack = require('webpack');
+const fs = require('fs');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+const babelSettings = JSON.parse(fs.readFileSync(".babelrc"));
 const environment = process.env.NODE_ENV || 'development';
 
 const config = {
@@ -23,11 +24,6 @@ const config = {
                 exclude: /node_modules/
             },
             {
-                use: [ 'style-loader', 'css-loader' ],
-                test: /\.css?$/,
-                exclude: /node_modules/
-            },
-            {
                 test: /\.pug?$/,
                 use: [
                   "file-loader?name=../../[name].html",
@@ -39,19 +35,26 @@ const config = {
             },
             {
                  test: /\.styl$/, 
-                 loader: ExtractTextPlugin.extract({ fallback: 'style-loader', 
+                 loader: ExtractTextPlugin.extract({ 
+                      fallback: 'style-loader',
                       use: [
-                      'css-loader?minimize!',
-                      {
-                          loader: 'postcss-loader',
-                          options: {
-                              plugins: function () {
-                                  return [autoprefixer()]
-                              },
-                              sourceMap: 'inline'
+                        {
+                          loader: 'css-loader',
+                          query: {
+                            minimize: true,
+                            sourceMap: false
                           }
-                      },
-                      'stylus-loader'
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: (loader) => [
+                                  require('postcss-cssnext')(),
+                                  require('cssnano')()
+                                ]
+                            }
+                        },
+                        'stylus-loader'
                       ]
                   }) 
               },
