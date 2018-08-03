@@ -10,7 +10,9 @@
 			"vendor": "bootstrap.styl"
 		},
 		"build": "",
-		"img": "",
+		"img": {
+			"0": "test_pattern.svg"
+		},
 		"fonts": "",
 		"pug": {
 			"0" : "index.pug",

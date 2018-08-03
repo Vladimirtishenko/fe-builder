@@ -14,7 +14,7 @@ const config = {
     output: {
         path: __dirname  + "/public/build",
         filename: 'build.[name].js',
-        publicPath: './build'
+        publicPath: './public'
     },
     module: {
         rules: [
@@ -27,8 +27,6 @@ const config = {
                 test: /\.pug?$/,
                 use: [
                   "file-loader?name=../../[name].html",
-                  "extract-loader",
-                  "html-loader",
                   "pug-html-loader"
                 ],
                 exclude: /node_modules/
@@ -60,7 +58,10 @@ const config = {
               },
               {
                   test: /\.(png|woff|woff2|otf|eot|ttf|svg|jpg|jpeg)$/, 
-                  loader: 'file-loader?limit=100000'
+                  options: {
+                    emitFile: false
+                  },
+                  loader: 'file-loader'
               }
         ]
     },
