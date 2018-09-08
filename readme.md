@@ -17,23 +17,22 @@ Now you have project tree:
         - app.js (Entry point for webpack)
     - pug
         - layout
-            - layout.pug (Layout for all block with link css to path /build) 
+            - layout.pug (Layout for all block with link css to path /build)
         - include (Folder for some included files e.g: header.pug, menu.pug et al.)
         - index.pug (Main html block content)
     - styl
         - vendor
           - bootstrap.styl
-- gulpfule.js (With tack for transformation pug file to html and image minified)
-- webpack.config.js (With architecture for transform stylus to css and ES6 to ES5)
+- webpack.config.js (With architecture for transform stylus to CSS, ES6/ES7/ES8 to ES5 and .pug to .html)
 - .babelrc
 - .gitignore
 - node_modules
 
 # Reqirement
 
-- Node.js >= 6.4.*
+- Node.js >= 8+
 - NPM >= 3.10.*
-- Webpack 2+ 
+- Webpack 4+
 
 
 # Tech
@@ -43,7 +42,6 @@ Dillinger uses a number of open source projects to work properly:
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
 * [node.js] - evented I/O for the backend
 * [Express] - fast node.js network app framework [@tjholowaychuk]
-* [Gulp] - the streaming build system
 * [Webpack] - Module bundler
 * [Pug] - The general rendering process of Pug is simple.
 * [Stylus] - Expressive, dynamic, robust css
@@ -63,8 +61,6 @@ Dillinger uses a number of open source projects to work properly:
    [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
    [express]: <http://expressjs.com>
    [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
    [Webpack]: <https://webpack.github.io/>
    [Pug]: <https://pugjs.org/api/getting-started.html>
    [Stylus]: <http://stylus-lang.com/>
-
