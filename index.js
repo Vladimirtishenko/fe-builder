@@ -23,7 +23,7 @@ module.exports = (function() {
                 json.dependencies = package.dependencies;
                 json.scripts = package.scripts;
                 fs.writeFileSync("package.json", JSON.stringify(json, null, 4))
-                
+
                 if (fs.existsSync(__dirname + '/source/gitignore')) {
                     fs.renameSync(__dirname + '/source/gitignore', __dirname + '/source/.gitignore')
                 }
@@ -78,7 +78,7 @@ module.exports = (function() {
         var listFiles = tree.split(', ');
         for (var i = listFiles.length - 1; i >= 0; i--) {
             fs.createReadStream(__dirname + '/source/' + listFiles[i]).pipe(fs.createWriteStream(folder + listFiles[i]));
-            
+
         }
     }
 
