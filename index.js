@@ -49,7 +49,11 @@ module.exports = (function() {
                 }
                 folder += mark + "/";
                 createTree(tree[mark], folder);
-                folder = "public/";
+
+                let folderArray = removeEmptyFromArray(folder),
+                    folderCut = folderArray.length > 1 ? folderArray.slice(0, folderArray.length - 1) : folderArray;
+
+                folder = folderCut.join('/') + '/';
 
             } else {
                 if (tree[mark] == "") {
@@ -72,6 +76,20 @@ module.exports = (function() {
 
         }
 
+    }
+
+    function removeEmptyFromArray(folder){
+
+        let folderArray = folder.split('/'),
+            newArray = []
+
+        for (var i = 0; i < folderArray.length; i++) {
+            if(folderArray[i]){
+                newArray.push(folderArray[i])
+            }
+        }
+
+        return newArray;
     }
 
     function cycleCopy(tree, folder) {

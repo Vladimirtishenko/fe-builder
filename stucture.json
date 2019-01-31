@@ -4,10 +4,14 @@
 			"0": "app.js",
 			"1": "index.js"
 		},
-		"css": "",
 		"styl": {
+			"blocks": "",
+			"vendor": "bootstrap.styl",
 			"0": "build.styl",
-			"vendor": "bootstrap.styl"
+			"common": {
+				"0": "defaults.styl",
+				"__modificators": ""
+			}
 		},
 		"build": "",
 		"img": {

@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "webpack --watch",
         "prod": "NODE_ENV='production' webpack -p --process --color",
-        "clear": "rm -rf public .babelrc .gitignore webpack.config.js node_modules package-lock.json index.html"
+        "clear": "rm -rf public .babelrc .gitignore webpack.config.js node_modules package-lock.json index.html & mv ./source/.gitignore ./source/gitignore & mv ./source/.babelrc ./source/babelrc"
     },
     "repository": {
         "type": "git",
@@ -36,7 +36,6 @@
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
         "bootstrap-4-stylus": "^1.0.4",
-        "bootstrap-styl": "^5.0.8",
         "bundle-loader": "^0.5.6",
         "css-loader": "^1.0.0",
         "cssnano": "^4.0.5",
