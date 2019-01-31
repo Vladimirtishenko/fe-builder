@@ -1,6 +1,6 @@
-var fs = require('fs');
-var source = require('./stucture.json');
-var package = require('./package.json');
+const fs = require('fs');
+const source = require('./stucture.json');
+const package = require('./package.json');
 
 module.exports = (function() {
 
@@ -8,7 +8,7 @@ module.exports = (function() {
     (function basicInit() {
 
         require('child_process').exec('npm init --yes', function(error, out) {
-            var pathToPackage = __dirname + '/package.json',
+            let pathToPackage = __dirname + '/package.json',
                 read,
                 json;
 
@@ -41,9 +41,9 @@ module.exports = (function() {
 
     function createTree(tree, folder) {
 
-        for (var mark in tree) {
+        for (let mark in tree) {
 
-            if (typeof tree[mark] == 'object') {
+            if (tree[mark] instanceof Object && !(tree[mark] instanceof Array) ) {
                 if (!fs.existsSync(folder + mark)) {
                     fs.mkdirSync(folder + mark);
                 }
@@ -64,6 +64,15 @@ module.exports = (function() {
                     fs.createReadStream(__dirname + '/source/' + tree[mark]).pipe(fs.createWriteStream(folder + tree[mark]));
                 } else if (mark == "$") {
                     cycleCopy(tree[mark], "")
+                } else if(Array.isArray(tree[mark])){
+                    let git = tree[mark][0],
+                        branch = tree[mark][1],
+                        folderIntoClone = folder + mark;
+                    require('child_process').exec('git clone --depth=1 --branch='+ branch + ' ' + git + ' ' + folderIntoClone + ' && rm -rf ' + folderIntoClone + '/.git ' + folderIntoClone + '/.gitignore', function(error, out){
+                        if(error){
+                            console.log(error);
+                        }
+                    })
                 } else {
                     if (!fs.existsSync(folder + mark)) {
                         fs.mkdirSync(folder + mark);
@@ -83,7 +92,7 @@ module.exports = (function() {
         let folderArray = folder.split('/'),
             newArray = []
 
-        for (var i = 0; i < folderArray.length; i++) {
+        for (let i = 0; i < folderArray.length; i++) {
             if(folderArray[i]){
                 newArray.push(folderArray[i])
             }
@@ -93,8 +102,8 @@ module.exports = (function() {
     }
 
     function cycleCopy(tree, folder) {
-        var listFiles = tree.split(', ');
-        for (var i = listFiles.length - 1; i >= 0; i--) {
+        let listFiles = tree.split(', ');
+        for (let i = listFiles.length - 1; i >= 0; i--) {
             fs.createReadStream(__dirname + '/source/' + listFiles[i]).pipe(fs.createWriteStream(folder + listFiles[i]));
 
         }
