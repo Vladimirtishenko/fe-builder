@@ -1,5 +1,5 @@
 # Installing
-For installing Front End Architecture which consist of (Stylus, Pug, Webpack + Babel, Gulp), you must do all at example:
+For installing Front End Infrastructure that consist of (Stylus, Pug, Webpack + Babel, Gulp), you must do all at an example:
 
 ```sh
 $ cd /to/project/folder
@@ -23,6 +23,10 @@ Now you have project tree:
     - styl
         - vendor
           - bootstrap.styl
+        - blocks
+        - common
+            - \_\_modificators
+            - defaults.styls
 - webpack.config.js (With architecture for transform stylus to CSS, ES6/ES7/ES8 to ES5 and .pug to .html)
 - .babelrc
 - .gitignore

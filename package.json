@@ -1,7 +1,7 @@
 {
     "name": "fe-builder",
-    "version": "2.1.4",
-    "description": "Build frontent architecture",
+    "version": "2.1.5",
+    "description": "Build frontent infrastructure",
     "main": "index.js",
     "scripts": {
         "dev": "webpack --watch",
