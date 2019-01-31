@@ -43,6 +43,11 @@ const config = {
                 exclude: /node_modules/
             },
             {
+                use: 'eslint-loader',
+                test: /\.js?$/,
+                exclude: /node_modules/
+            },
+            {
                  test: /\.styl$/,
                  use: [
                     {
@@ -59,7 +64,7 @@ const config = {
                         loader: 'postcss-loader',
                         options: {
                             plugins: (loader) => [
-                              require('postcss-cssnext')(),
+                              require('postcss-preset-env')(),
                               require('cssnano')()
                             ]
                         }

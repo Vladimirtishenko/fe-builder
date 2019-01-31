@@ -1,11 +1,9 @@
 'use strict';
 
 class App {
-	constructor() {
-		
-	}
+    constructor() {}
 }
 
 window.addEventListener('DOMContentLoaded', function(){
-	new App();
+    new App();
 });

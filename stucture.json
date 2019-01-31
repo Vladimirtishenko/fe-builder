@@ -27,5 +27,5 @@
 			"include": ""
 		}
 	},
-	"$": "webpack.config.js, .gitignore, .babelrc"
+	"$": "webpack.config.js, .gitignore, .babelrc, .eslintrc"
 }
