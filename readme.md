@@ -1,10 +1,10 @@
 # Installing
-For installing Front End Infrastructure that consist of (Stylus, Pug, Webpack + Babel, Gulp), you must do all at an example:
+For create Front End Infrastructure that consist of (Stylus, Pug, Webpack + Babel, BEM):
 
 ```sh
-$ cd /to/project/folder
-$ npm i fe-builder
-$ echo "require('fe-builder')" >> index.js && node index.js && rm index.js
+cd /to/project/folder
+npm i fe-builder
+echo "require('fe-builder')" >> index.js && node index.js && rm index.js
 ```
 
 Now you have project tree:
@@ -31,7 +31,7 @@ Now you have project tree:
             - variables.styl ( Grid sizes for bootstrap )
           - bem
             - \_\_modificators
-                \_\_\*.styl - (Static  bem modificators)
+                - \_\_\*.styl - (Static  bem modificators)
         - blocks
         - common
             - \_\_modificators
@@ -42,15 +42,21 @@ Now you have project tree:
 - node_modules
 
 # Launch
-    - Development
-    ```
-        npm run dev
-    ```
 
-    - Production
-    ```
-        npm run build
-    ```
+- Development
+
+This command immediately open the browser on the http://localhost:8080, will make the build and will watches your changes!
+
+```sh
+npm run dev
+```
+
+
+- Production
+
+```sh
+npm run build
+```
 
 # Reqirement
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 html(lang="en")
-	- const publicPath = process.env.NODE_ENV == 'production' ? '/' : './';
+	- const publicPath = process.env.NODE_ENV == 'production' ? '/public/build/' : '/';
 	head
-		title
+		title Hello home page
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
 		meta(name='keywords', content='')
@@ -24,9 +24,9 @@ html(lang="en")
 		link(rel='shortcut icon', href='')
 		link(rel='apple-touch-icon', sizes='128x128', href='')
 		link(rel='apple-touch-icon-precomposed', sizes='128x128', href='')
-		link(rel='stylesheet', href='https://cdn.report/build/core.min.css')
-		link(rel='stylesheet', href=publicPath+'public/build/build.app.css')
+		link(rel='stylesheet', type="text/css" href='https://cdn.report/build/core.min.css')
+		link(rel='stylesheet', type="text/css" href=publicPath+'build.app.css')
 	body
 		block content
 		script(src="https://cdn.report/build/core.min.js")
-		script(src=publicPath+"public/build/build.app.js")
+		script(src=publicPath+"build.app.js")
