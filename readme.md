@@ -14,7 +14,11 @@ Now you have project tree:
     - build
     - css
     - js
-        - app.js (Entry point for webpack)
+        - controllers
+            - home.ctrl.js ( First controller for main page /)
+        - router.js (Router for resolving path and async load JS modules)
+        - app.js (Js entry point)
+        - index.js (Entry point for webpack)
     - pug
         - layout
             - layout.pug (Layout for all block with link css to path /build)
@@ -22,7 +26,12 @@ Now you have project tree:
         - index.pug (Main html block content)
     - styl
         - vendor
-          - bootstrap.styl
+          - bootstrap
+            - bootstrap.styl ( Main bootstrap file that include just Bootstrap layout)
+            - variables.styl ( Grid sizes for bootstrap )
+          - bem
+            - \_\_modificators
+                \_\_\*.styl - (Static  bem modificators)
         - blocks
         - common
             - \_\_modificators
@@ -31,6 +40,17 @@ Now you have project tree:
 - .babelrc
 - .gitignore
 - node_modules
+
+# Launch
+    - Development
+    ```
+        npm run dev
+    ```
+
+    - Production
+    ```
+        npm run build
+    ```
 
 # Reqirement
 
@@ -45,7 +65,6 @@ Dillinger uses a number of open source projects to work properly:
 
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
 * [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
 * [Webpack] - Module bundler
 * [Pug] - The general rendering process of Pug is simple.
 * [Stylus] - Expressive, dynamic, robust css
