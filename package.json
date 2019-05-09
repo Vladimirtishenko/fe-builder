@@ -1,6 +1,6 @@
 {
     "name": "fe-builder",
-    "version": "2.2.2",
+    "version": "2.3.0",
     "description": "Build frontent infrastructure",
     "main": "index.js",
     "scripts": {

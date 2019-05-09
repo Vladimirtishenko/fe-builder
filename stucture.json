@@ -1,8 +1,12 @@
 {
 	"public": {
 		"js": {
+			"controllers": {
+				"0": "home.ctrl.js"
+			},
 			"0": "app.js",
-			"1": "index.js"
+			"1": "index.js",
+			"2": "router.js"
 		},
 		"styl": {
 			"blocks": "",
