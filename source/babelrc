@@ -1,4 +1,12 @@
 {
-	"presets": ["env", "stage-0", "react"],
-	"plugins": ["babel-plugin-transform-runtime", "transform-decorators-legacy"]
+	"plugins": [
+		["@babel/plugin-transform-runtime"],
+		["@babel/plugin-proposal-decorators", { "legacy": true }],
+    	["@babel/plugin-proposal-class-properties", { "loose" : true }],
+		["@babel/plugin-transform-async-to-generator", {
+	      "module": "bluebird",
+	      "method": "coroutine"
+	    }],
+		["@babel/plugin-syntax-dynamic-import"]
+	]
 }

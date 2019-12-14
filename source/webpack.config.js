@@ -1,12 +1,6 @@
-"use strict";
-
-const webpack = require('webpack');
-const fs = require('fs');
-const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const babelSettings = JSON.parse(fs.readFileSync(".babelrc"));
-const environment = process.env.NODE_ENV || 'development';
-const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+ environment = process.env.NODE_ENV || 'development',
+ TerserPlugin = require('terser-webpack-plugin');
 
 const config = {
     name: 'js',
@@ -36,7 +30,7 @@ const config = {
                     }
                   }
 
-                ],
+                ]
             },
             {
                 use: 'babel-loader',
@@ -64,7 +58,7 @@ const config = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            plugins: (loader) => [
+                            plugins: () => [
                               require('postcss-preset-env')(),
                               require('cssnano')()
                             ]
@@ -94,20 +88,20 @@ if (environment === 'production') {
     new TerserPlugin({
       terserOptions: {
         parse: {
-          ecma: 8,
+          ecma: 8
         },
         compress: {
           ecma: 5,
           warnings: false,
-          comparisons: false,
+          comparisons: false
         },
         mangle: {
-          safari10: true,
+          safari10: true
         },
         output: {
           ecma: 5,
           comments: false
-        },
+        }
       }
     })
   ];

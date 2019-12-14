@@ -1,9 +1,13 @@
+* Move to new babel version
+
 # Installing
-For create Front End Infrastructure that consist of (Stylus, Pug, Webpack + Babel, BEM):
+For create Front End Infrastructure that consist of (Yarn, Stylus, Pug, Webpack + Babel, BEM):
+
+- Intall yarn https://yarnpkg.com/lang/en/docs/install/#mac-stable
 
 ```sh
 cd /to/project/folder
-npm i fe-builder
+yarn i fe-builder
 echo "require('fe-builder')" >> index.js && node index.js && rm index.js
 ```
 
@@ -29,6 +33,7 @@ Now you have project tree:
           - bootstrap
             - bootstrap.styl ( Main bootstrap file that include just Bootstrap layout)
             - variables.styl ( Grid sizes for bootstrap )
+            - function.styl ( Creating own cols- for bootstrap )
           - bem
             - \_\_modificators
                 - \_\_\*.styl - (Static  bem modificators)
@@ -48,20 +53,18 @@ Now you have project tree:
 This command immediately open the browser on the http://localhost:8080, will make the build and will watches your changes!
 
 ```sh
-npm run dev
+yarn run dev
 ```
-
 
 - Production
 
 ```sh
-npm run build
+yarn run build
 ```
 
 # Reqirement
 
 - Node.js >= 8+
-- NPM >= 3.10.*
 - Webpack 4+
 
 
