@@ -48,7 +48,7 @@
         "no-unused-expressions": [2, { "allowShortCircuit": true }],
         "no-else-return": 0,
         "consistent-return": [1, { "treatUndefinedAsUnspecified": true }],
-        "max-len": [1, { "code": 150 }],
+        "max-len": [1, { "code": 150, "ignoreComments": true, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true, "ignoreRegExpLiterals": true }],
         "guard-for-in": 0,
         "no-restricted-syntax": [2, "WithStatement", "BinaryExpression[operator='in']"],
         "no-continue": 0,
