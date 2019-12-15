@@ -1,4 +1,12 @@
-* Move to new babel version
+# New version of JavaScript environment
+
+Last development logs:
+
+    * Structure has been slightly changed;
+    * New version of Babel has been installed;
+    * New function for extends bootstrap were added;
+    * All dependencies were updated;
+    * .eslint rules were changed
 
 # Installing
 For create Front End Infrastructure that consist of (Yarn, Stylus, Pug, Webpack + Babel, BEM):
