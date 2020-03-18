@@ -15,7 +15,7 @@ For create Front End Infrastructure that consist of (Yarn, Stylus, Pug, Webpack 
 
 ```sh
 cd /to/project/folder
-yarn i fe-builder
+yarn add fe-builder
 echo "require('fe-builder')" >> index.js && node index.js && rm index.js
 ```
 
