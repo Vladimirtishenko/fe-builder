@@ -1,6 +1,6 @@
 {
     "name": "fe-builder",
-    "version": "3.1.4",
+    "version": "3.1.5",
     "description": "Build your amazing frontend",
     "main": "index.js",
     "scripts": {
